@@ -1,0 +1,37 @@
+languageCode: pt-BR
+title: Vinicius
+theme: ["PaperMod"]
+
+params:
+
+  env: production
+  title: Vinicius
+  description: "Meu site para expor meus trabalhos, tanto os produtivos quanto os improdutivos"
+  author: "Vinicius Santos"
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: True
+  ShowCodeCopyButtons: false
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: true
+  UseHugoToc: true
+  disableScrollToTop: false
+  comments: false
+  hidemeta: false
+  hideSummary: false
+  showtoc: false
+  tocopen: false
+
+  homeInfoParams:
+    Title: "Vinicius"
+    Content: >
+      Bem vindo ao meu site. Este site foi criado com o intuito de divulgar meus trabalhos, tanto os produtivos quanto os improdutivos. 
+
+
+  socialIcons:
+    - name: GoToSocial
+      url: "https://social.vinicius.qsl.br/@vinicius"
+    - name: github
+      url: "https://github.com/ViniciusDMSantos"
+
