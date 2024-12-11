@@ -34,4 +34,6 @@ params:
       url: "https://social.vinicius.qsl.br/@vinicius"
     - name: github
       url: "https://github.com/ViniciusDMSantos"
-
+    - name: email
+      url: "mailto:vinicius@vinicius.qsl.br"
+      icon: "fa fa-envelope"
