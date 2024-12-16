@@ -12,20 +12,22 @@ let
      cp -r ./* $out/*
     '';
   };
-in
-stdenv.mkDerivation rec {
-  name = "vinicius-site";
-  src = ./.;
+in {
+  stdenv.mkDerivation rec {
+    name = "vinicius-site";
+    src = ./.;
 
-  buildInputs = [ hugo go ];
+    buildInputs = [ hugo go ];
 
-  buildPhase = ''
-    hugo
-  '';
+    buildPhase = ''
+      cp -r ${theme} ./themes/PaperMod
+      hugo
+    '';
 
-  installPhase = ''
-    mkdir -p $out/public
-    cp -r public/* -T $out/public
-  '';
-
+    installPhase = ''
+      mkdir -p $out/public
+      cp -r public/* -T $out/public
+    '';
+  
+  }
 }
