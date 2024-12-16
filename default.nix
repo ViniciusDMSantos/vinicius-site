@@ -2,13 +2,7 @@
 
 stdenv.mkDerivation rec {
   name = "vinicius-site";
-  src = fetchFromGitHub {
-    owner = "ViniciusDMSantos";
-    repo = "vinicius-site";
-    rev = "80e416f";
-    sha256 = "sha256-tFBuCzzhKUXxhUniOmEvb+n3ebTxWp23U9tUWrWi3Pc=";
-    fetchSubmodules = true;
-  };
+  src = ./.
 
   buildInputs = [ hugo go git ];
 
