@@ -8,10 +8,10 @@ let
       repo = "hugo-PaperMod";
       rev = "3e53621";
       hash = lib.fakeSha256;
-     installPhase = ''
-     cp -r ./* $out/*
-    '';
     };
+    installPhase = ''
+      cp -r ./* $out/*
+    '';
   };
 in
 stdenv.mkDerivation rec {
