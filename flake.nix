@@ -24,10 +24,10 @@
         };
         apps = rec {
           default = serve;
-          serve = flake-utils.lib.mkApp {pkgs.writeShellScriptBin "serve" ''
+          serve = mkApp (pkgs.writeShellScriptBin "serve" ''
             echo "Serving on http://localhost:8000"
             ${pkgs.webfs}/bin/webfsd -F -f index.html -r ${packages.default}/public
-          ''};
+          '');
         };
       };
     );
