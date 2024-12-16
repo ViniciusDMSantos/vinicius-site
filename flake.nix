@@ -3,39 +3,32 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-24.11";
+    flake-utils.url = "github:numtide/flake-utils";
   };
 
 
-  outputs = { self, nixpkgs }:
+  outputs = { self, nixpkgs, flake-utils }:
 
-  let
-    supportedSystems = [ "x86_64-linux" ];
-
-    forAllSystems = nixpkgs.lib.genAttrs supportedSystems;
-
-    nixpkgsFor = forAllSystems (system: import nixpkgs { inherit system; });
-
-    pkgs = nixpkgsFor.${system};
-
-    mkApp = drv: {
-      type = "app";
-      program = nixpkgs.lib.getExe drv;
-  };
-  in rec {
-    packages = forAllSystems (system: {
-        default = vinicius-site;
-        vinicius-site = pkgs.callPackage ./default.nix {};
-    });
-
-    apps = forAllSystems (system: {
-      default = serve;
-      serve = mkApp (pkgs.writeShellScriptBin "serve" ''
-        echo "Serving on http://localhost:8000"
-        ${pkgs.webfs}/bin/webfsd -F -f index.html -r ${packages.default}/public
-      '');
-
-    });
-
-  };
-
+    flake-utils.lib.eachDefaultSystem (system:
+      let 
+        pkgs = nixpkgs.legacyPackages.${system}; 
+        mkApp = drv: {
+          type = "app";
+          program = nixpkgs.lib.getExe drv;
+        };
+      in
+      {
+        packages = rec {
+          vinicius-site = pkgs.callPackage ./default.nix {};
+          default = vinicius-site;
+        };
+        apps = rec {
+          default = serve;
+          serve = flake-utils.lib.mkApp {pkgs.writeShellScriptBin "serve" ''
+            echo "Serving on http://localhost:8000"
+            ${pkgs.webfs}/bin/webfsd -F -f index.html -r ${packages.default}/public
+          ''};
+        };
+      };
+    );
 }
