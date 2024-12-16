@@ -12,7 +12,7 @@ stdenv.mkDerivation rec {
 
   installPhase = ''
     mkdir -p $out/public
-    cp -r public -T $out/public
+    cp -r public/ -T $out/public
   '';
 
 }
