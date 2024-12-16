@@ -4,7 +4,7 @@ stdenv.mkDerivation rec {
   name = "vinicius-site";
   src = ./.;
 
-  buildInputs = [ hugo go git ];
+  buildInputs = [ hugo go ];
 
   buildPhase = ''
     hugo
