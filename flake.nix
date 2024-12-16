@@ -16,7 +16,7 @@
           type = "app";
           program = nixpkgs.lib.getExe drv;
         };
-      in
+      in rec
       {
         packages = rec {
           vinicius-site = pkgs.callPackage ./default.nix {};
