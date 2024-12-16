@@ -25,7 +25,7 @@
     packages = forAllSystems (system: {
         default = vinicius-site;
         vinicius-site = pkgs.callPackage ./default.nix {};
-    };);
+    });
 
     apps = forAllSystems (system: {
       default = serve;
@@ -34,7 +34,7 @@
         ${pkgs.webfs}/bin/webfsd -F -f index.html -r ${packages.default}/public
       '');
 
-    };);
+    });
 
   };
 
