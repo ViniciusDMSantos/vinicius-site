@@ -29,6 +29,6 @@
             ${pkgs.webfs}/bin/webfsd -F -f index.html -r ${packages.default}/public
           '');
         };
-      };
+      }
     );
 }
