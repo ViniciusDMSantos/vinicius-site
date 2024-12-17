@@ -21,6 +21,7 @@ stdenv.mkDerivation rec {
   buildInputs = [ hugo go ];
 
   buildPhase = ''
+    mkdir ./themes/PaperMod
     cp -r ${theme} ./themes/PaperMod
     hugo
   '';
