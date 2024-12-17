@@ -10,7 +10,7 @@ let
       sha256 = "sha256-Dv/QnYYG5KTQro95kzwgQeOS0nO2HyfBoSou5AsCFAI=";
     };
     installPhase = ''
-      cp -r ./* $out/*
+      cp -r ./ $out/
     '';
   };
 in
