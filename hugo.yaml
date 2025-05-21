@@ -30,8 +30,8 @@ params:
 
 
   socialIcons:
-    - name: GoToSocial
-      url: "https://social.vinicius.qsl.br/@vinicius"
+    - name: Mastodon
+      url: "https://mastodon.social/@vinicius_py2vmh"
     - name: github
       url: "https://github.com/ViniciusDMSantos"
     - name: email
