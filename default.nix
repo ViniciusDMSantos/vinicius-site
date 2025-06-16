@@ -6,8 +6,8 @@ let
     src = fetchFromGitHub {       
       owner = "adityatelange";
       repo = "hugo-PaperMod";
-      rev = "3e53621";
-      sha256 = "sha256-Dv/QnYYG5KTQro95kzwgQeOS0nO2HyfBoSou5AsCFAI=";
+      rev = "5a46517";
+      sha256 = "AAAA";
     };
     installPhase = ''
       cp -r ./. $out/
