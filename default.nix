@@ -7,7 +7,7 @@ let
       owner = "adityatelange";
       repo = "hugo-PaperMod";
       rev = "5a46517";
-      sha256 = lib.fakeSha256;
+      sha256 = "sha256-XlxkAfGY59V5KqLoIJdxbHgtK4vqWXMn1GMaFchWhs8=";
     };
     installPhase = ''
       cp -r ./. $out/
