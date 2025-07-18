@@ -9,7 +9,7 @@ params:
   description: "Meu site para expor meus trabalhos, tanto os produtivos quanto os improdutivos"
   author: "Vinicius Santos"
   ShowReadingTime: true
-  ShowShareButtons: true
+  ShowShareButtons: false
   ShowPostNavLinks: true
   ShowBreadCrumbs: True
   ShowCodeCopyButtons: false
