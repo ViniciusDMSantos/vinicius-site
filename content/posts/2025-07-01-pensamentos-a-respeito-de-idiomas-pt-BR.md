@@ -1,8 +1,10 @@
 ---
 date: '2025-07-01T23:48:00-03:00'
 draft: false
-title: 'Desabafo sobre Linguística'
+title: 'Pensamentos a respeito de idiomas'
 ---
+
+(Título editado em 2025-09-08)
 
 Hoje eu gostaria de falar um pouco sobre algumas características linguísticas do português brasileiro (PT-BR), do japonês (JP-JP) e do inglês (EN-US primariamente, mas também se aplica aos demais ENs).
 
