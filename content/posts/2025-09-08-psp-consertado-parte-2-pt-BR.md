@@ -1,7 +1,7 @@
 ---
 date: '2025-09-08T18:21:00-03:00'
 draft: false
-title: 'PSP consertado, parte 2'
+title: 'PSP consertado parte 2'
 ---
 
 Mais uma vez, abri meu PSP para consertá-lo. PSPs possuem um supercapacitor em suas placas-mãe que armazena energia para manter o relógio do PSP em dia, mesmo sem bateria. Com o tempo, esse supercapacitor falhará e, muitas vezes, irá causar problemas de dreno de bateria. No caso de PSPs da série 3000 (o meu é um PSP 3010), isso é bem comum. Então, eu abri meu PSP (com muita dificuldade), e pedi para um colega meu com bem mais experiência em eletrônica que eu dessoldar o supercapacitor. Ele conseguiu (mas arrancou a pad do supercapacitor), e eu remontei o PSP.
